@@ -34,8 +34,9 @@ function getAllPages(url){
         $("#items-holder li").each((i, elem) => {
           data.push({
             title: $(elem).find('.title').text(),
-            info: $(elem).find('.info').text(),
-            price: $(elem).find('.price').text()
+            img: $(elem).find('img').eq(0).attr('src'),
+            price: $(elem).find('.price').text(),
+            url: generalUrl + $(elem).find('a').attr('href')
           })
 
         });
